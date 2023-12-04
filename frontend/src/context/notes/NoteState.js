@@ -14,7 +14,7 @@ const NoteState = (props) => {
   //fetch user Name
   const fetchData =  async() => {
     try {
-      const response = await fetch("/api/auth/getuser/", {
+      const response = await fetch("https://being-diary-backend.onrender.com/api/auth/getuser/", {
         method: "POST",
         headers: {
           "auth-token": Cookies.get('authtoken'),
@@ -32,7 +32,7 @@ const NoteState = (props) => {
   //get all notes
   const getNote = async () => {
 
-    const response = await fetch("api/notes/fetchallnotes", {
+    const response = await fetch("https://being-diary-backend.onrender.com/api/notes/fetchallnotes", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const NoteState = (props) => {
 
   //add a note
   const addNote = async (title, description, tag) => {
-    const response = await fetch("api/notes/addnote", {
+    const response = await fetch("https://being-diary-backend.onrender.com/api/notes/addnote", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const NoteState = (props) => {
   //delete a note
   const deleteNote = async (id) => {
     //Api call to delete
-    const response = await fetch(`api/notes/deletenote/${id}`, {
+    const response = await fetch(`https://being-diary-backend.onrender.com/api/notes/deletenote/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const NoteState = (props) => {
   //edit a note
   const editNote = async (id, title, description, tag) => {
 
-    const response = await fetch(`api/notes/updatenote/${id}`, {
+    const response = await fetch(`https://being-diary-backend.onrender.com/api/notes/updatenote/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
