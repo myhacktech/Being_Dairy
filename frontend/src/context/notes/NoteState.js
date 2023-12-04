@@ -20,7 +20,6 @@ const NoteState = (props) => {
           "content-type": "API-Key",
           "auth-token": Cookies.get('authtoken'),
         },
-        credentials: "include",
       });
       const json = await response.json();
       // setName("json.name");
