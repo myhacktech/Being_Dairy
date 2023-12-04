@@ -31,7 +31,12 @@ connectToMongo(); // connecting to database
 // console.log("");
 
 const app = express();
-app.use(cors()); //  Calling use(cors()) will enable the express server to respond to requests(put ,post ,delete,get).
+app.use(
+  cors({
+    origin:"*",
+      credentials:true
+    })
+); //  Calling use(cors()) will enable the express server to respond to requests(put ,post ,delete,get).
 
 app.use(express.json()); // to accept json data
 
