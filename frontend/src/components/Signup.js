@@ -30,7 +30,7 @@ function SignUp(props) {
     let cpass = document.querySelector("#cpassword").value;
     if (pass === cpass) {
       setLoad(true);
-      const response = await fetch("api/auth/createuser", {
+      const response = await fetch("https://being-diary-backend.onrender.com/api/auth/createuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
