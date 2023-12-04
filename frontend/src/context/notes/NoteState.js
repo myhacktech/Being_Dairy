@@ -17,14 +17,14 @@ const NoteState = (props) => {
       const response = await fetch("https://being-diary-backend.onrender.com/api/auth/getuser/", {
         method: "POST",
         headers: {
-          "auth-token": Cookies.get('authtoken'),
+          "auth-token": Cookies.get('auth-token'),
         },
       });
       const json = await response.json();
       // setName("json.name");
       setName(json.name);
       console.log(json);
-      console.log("authtoken.....", Cookies.get('authtoken'));
+      console.log("authtoken.....", Cookies.get('auth-token'));
     } catch (error) {
       console.error("Error:", error);
     }
