@@ -23,7 +23,8 @@ const NoteState = (props) => {
       const json = await response.json();
       // setName("json.name");
       setName(json.name);
-      // console.log(json);
+      console.log(json);
+      console.log("authtoken.....", Cookies.get('authtoken'));
     } catch (error) {
       console.error("Error:", error);
     }
