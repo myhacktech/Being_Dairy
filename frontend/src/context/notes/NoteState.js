@@ -17,11 +17,10 @@ const NoteState = (props) => {
       const response = await fetch("https://being-diary-backend.onrender.com/api/auth/getuser/", {
         method: "POST",
         headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
+          "content-type": "API-Key",
           "auth-token": Cookies.get('authtoken'),
         },
-        credentials: 'same-origin',
+        credentials: "include",
       });
       const json = await response.json();
       // setName("json.name");
